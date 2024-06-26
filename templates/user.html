@@ -158,6 +158,7 @@
     </div>
 </div>
 
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
@@ -177,12 +178,13 @@
     })
 
     $('#deleteExpenseModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget)
-        var id = button.data('id')
+    var button = $(event.relatedTarget)
+    var id = button.data('id')
 
-        var modal = $(this)
-        modal.find('.modal-body #delete-expense-id').val(id)
-    })
+    var modal = $(this)
+    modal.find('.modal-body #delete-expense-id').val(id)
+})
+
 </script>
 </body>
 </html>
