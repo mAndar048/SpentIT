@@ -186,9 +186,6 @@ def update_expense():
 
 @app.route('/delete_expense', methods=['POST'])
 def delete_expense():
-    if 'loggedin' not in session:
-        return redirect('/login')
-
     expense_id = request.form['id']
 
     conn = get_db_connection()
@@ -196,7 +193,7 @@ def delete_expense():
     conn.commit()
     conn.close()
     return redirect('/user')
-
+    
 if __name__ == '__main__':
     create_tables()
     app.run(debug=True)
